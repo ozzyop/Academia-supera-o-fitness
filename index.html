@@ -304,6 +304,46 @@
       .logo-line2 { font-size: clamp(18px, 6.4vw, 28px); }
     }
 
+    /* ===== HERO STATS ===== */
+    .hero-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 48px;
+    }
+
+    .hstat {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      padding: 24px 16px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .hstat:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(126, 211, 33, 0.3);
+      transform: translateY(-2px);
+    }
+
+    .hstat-num {
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--super-green);
+      display: block;
+      font-family: 'Anton', sans-serif;
+      margin-bottom: 8px;
+    }
+
+    .hstat-label {
+      font-size: 0.8rem;
+      color: var(--gray);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 600;
+    }
+
     @media (max-width: 860px) {
       .hero-inner {
         grid-template-columns: 1fr;
@@ -314,11 +354,33 @@
         margin: 0 auto;
       }
       .hero-strip {
-        flex-wrap: wrap;
-        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-top: 32px;
       }
       .hstat {
-        flex: 1 1 40%;
+        padding: 16px 12px;
+      }
+      .hstat-num {
+        font-size: 1.5rem;
+      }
+      .hstat-label {
+        font-size: 0.75rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-strip {
+        gap: 10px;
+      }
+      .hstat {
+        padding: 12px 10px;
+      }
+      .hstat-num {
+        font-size: 1.25rem;
+      }
+      .hstat-label {
+        font-size: 0.7rem;
       }
     }
 
@@ -784,7 +846,7 @@
   <div class="container">
     <h2>Chega de adiar.<br>Comece hoje.</h2>
     <p>Sua primeira aula experimental é por nossa conta. Venha conhecer a estrutura e sentir a energia do treino.</p>
-    <a href="https://wa.me/5569992449335?text=Olá! Gostaria de agendar minha primeira aula experimental na Academia Superação Fitness." target="_blank" rel="noopener noreferrer" class="btn btn-primary">Agendar aula</a>
+    <a href="https://wa.me/5569992449335?text=Olá! Gostaria de agendar minha primeira aula experimental na Academia Superação Fitness." target="_blank" rel="noopener noreferrer" class="btn btn-primary">Agendar primeira aula</a>
   </div>
 </section>
 
