@@ -139,6 +139,7 @@
       letter-spacing: 0.04em;
       border-radius: 4px;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: inline-block;
     }
 
     .nav-cta:hover {
@@ -382,8 +383,10 @@
     /* ===== PLANOS ===== */
     .plans-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1fr;
       gap: 20px;
+      max-width: 600px;
+      margin: 0 auto;
     }
 
     .plan-card {
@@ -564,7 +567,7 @@
     @media (max-width: 860px) {
       .g-grid {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 150px 150px 150px;
+        grid-template-rows: 150px 150px;
       }
       .g-grid > div:first-child {
         grid-row: span 1;
@@ -727,7 +730,7 @@
     </div>
 
     <!-- CTA BOTÃO -->
-    <a href="#planos" class="nav-cta">Matricule-se</a>
+    <a href="https://wa.me/5569992449335?text=Olá! Gostaria de saber mais sobre os planos da Academia Superação Fitness." target="_blank" rel="noopener noreferrer" class="nav-cta">Matricule-se</a>
   </div>
 </nav>
 
@@ -740,7 +743,7 @@
       <h1>Supere seus <span class="stroke">limites</span> todo dia.</h1>
       <p class="hero-sub">Musculação, funcional, cross training e outras modalidades em um só lugar. Estrutura completa pra você treinar sério, sem enrolação.</p>
       <div class="hero-actions">
-        <a href="#planos" class="btn btn-primary">Ver planos</a>
+        <a href="https://wa.me/5569992449335?text=Olá! Gostaria de ver os planos da Academia Superação Fitness." target="_blank" rel="noopener noreferrer" class="btn btn-primary">Ver planos</a>
         <a href="#modalidades" class="btn btn-outline">Conhecer modalidades</a>
       </div>
     </div>
@@ -827,44 +830,19 @@
       <h2>Planos de Matrícula</h2>
     </div>
     <div class="plans-grid">
-      <!-- PLANO MENSAL -->
-      <div class="plan-card">
-        <div class="plan-name">Mensal</div>
-        <div class="plan-desc">Ideal pra experimentar sem compromisso</div>
-        <div class="plan-price"><span class="val">R$99</span><span class="period">/mês</span></div>
-        <ul class="plan-list">
-          <li><svg viewBox="0 0 20 20" fill="currentColor"><path d="M8 13l-3-3 1-1 2 2 5-5 1 1z"/></svg>Acesso a todas as modalidades</li>
-          <li><svg viewBox="0 0 20 20" fill="currentColor"><path d="M8 13l-3-3 1-1 2 2 5-5 1 1z"/></svg>Avaliação física inicial</li>
-          <li><svg viewBox="0 0 20 20" fill="currentColor"><path d="M8 13l-3-3 1-1 2 2 5-5 1 1z"/></svg>Sem fidelidade</li>
-        </ul>
-        <button class="plan-btn">Matricular</button>
-      </div>
-
-      <!-- PLANO TRIMESTRAL (DESTAQUE) -->
+      <!-- PLANO MENSAL ÚNICO -->
       <div class="plan-card featured">
-        <span class="plan-badge">Mais Vendido</span>
-        <div class="plan-name">Trimestral</div>
-        <div class="plan-desc">O melhor custo-benefício</div>
-        <div class="plan-price"><span class="val">R$79</span><span class="period">/mês</span></div>
+        <span class="plan-badge">Plano Único</span>
+        <div class="plan-name">Mensal</div>
+        <div class="plan-desc">Acesso total sem taxa de fidelidade.</div>
+        <div class="plan-price"><span class="val">R$110</span><span class="period">/mês</span></div>
         <ul class="plan-list">
-          <li><svg viewBox="0 0 20 20" fill="currentColor"><path d="M8 13l-3-3 1-1 2 2 5-5 1 1z"/></svg>Acesso a todas as modalidades</li>
-          <li><svg viewBox="0 0 20 20" fill="currentColor"><path d="M8 13l-3-3 1-1 2 2 5-5 1 1z"/></svg>Avaliação física a cada mês</li>
-          <li><svg viewBox="0 0 20 20" fill="currentColor"><path d="M8 13l-3-3 1-1 2 2 5-5 1 1z"/></svg>Treino personalizado</li>
-          <li><svg viewBox="0 0 20 20" fill="currentColor"><path d="M8 13l-3-3 1-1 2 2 5-5 1 1z"/></svg>Acesso ilimitado</li>
+          <li><svg viewBox="0 0 20 20" fill="currentColor"><path d="M8 13l-3-3 1-1 2 2 5-5 1 1z"/></svg>Acesso a todas as modalidades (Musculação, Cross Training, Funcional, Ginástica e Pós-Fisioterapia)</li>
+          <li><svg viewBox="0 0 20 20" fill="currentColor"><path d="M8 13l-3-3 1-1 2 2 5-5 1 1z"/></svg>Avaliação física e acompanhamento técnico</li>
+          <li><svg viewBox="0 0 20 20" fill="currentColor"><path d="M8 13l-3-3 1-1 2 2 5-5 1 1z"/></svg>Sem contrato de fidelidade ou taxa de cancelamento</li>
+          <li><svg viewBox="0 0 20 20" fill="currentColor"><path d="M8 13l-3-3 1-1 2 2 5-5 1 1z"/></svg>Horário livre de treino</li>
         </ul>
-        <button class="plan-btn">Matricular</button>
-      </div>
-
-      <!-- PLANO ANUAL -->
-      <div class="plan-card">
-        <div class="plan-name">Anual</div>
-        <div class="plan-desc">Compromisso de longo prazo, maior economia</div>
-        <div class="plan-price"><span class="val">R$69</span><span class="period">/mês</span></div>
-        <ul class="plan-list">
-          <li><svg viewBox="0 0 20 20" fill="currentColor"><path d="M8 13l-3-3 1-1 2 2 5-5 1 1z"/></svg>Tudo do plano trimestral</li>
-          <li><svg viewBox="0 0 20 20" fill="currentColor"><path d="M8 13l-3-3 1-1 2 2 5-5 1 1z"/></svg>Congelamento grátis (até 15 dias)</li>
-        </ul>
-        <button class="plan-btn">Matricular</button>
+        <a href="https://wa.me/5569992449335?text=Olá! Gostaria de me matricular no Plano Mensal da Academia Superação Fitness." target="_blank" rel="noopener noreferrer" class="plan-btn">Matricular</a>
       </div>
     </div>
   </div>
@@ -881,7 +859,6 @@
       <div class="g-tile" style="background: linear-gradient(135deg, #4F8C1B, #0A0A0B);"><span>Área de Musculação</span></div>
       <div class="g-tile" style="background: linear-gradient(135deg, #A8E063, #4F8C1B);"><span>Espaço Cross Training</span></div>
       <div class="g-tile" style="background: linear-gradient(135deg, #0A0A0B, #1c1c1f);"><span>Sala de Aeróbica</span></div>
-      <div class="g-tile" style="background: linear-gradient(135deg, #151517, #4F8C1B);"><span>Vestiários</span></div>
     </div>
   </div>
 </section>
@@ -891,7 +868,7 @@
   <div class="container">
     <h2>Chega de adiar.<br>Comece hoje.</h2>
     <p>Sua primeira aula experimental é por nossa conta. Venha conhecer a estrutura e sentir a energia do treino.</p>
-    <a href="#planos" class="btn btn-primary">Quero minha aula grátis</a>
+    <a href="https://wa.me/5569992449335?text=Olá! Gostaria de agendar minha primeira aula experimental na Academia Superação Fitness." target="_blank" rel="noopener noreferrer" class="btn btn-primary">Quero minha aula grátis</a>
   </div>
 </section>
 
