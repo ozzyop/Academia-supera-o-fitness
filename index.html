@@ -17,6 +17,7 @@
       --amber: #A8E063;
       --white: #F4F3F1;
       --gray: #8A8985;
+      --super-green: #76BA1B; /* logo green requested */
     }
 
     * {
@@ -242,39 +243,65 @@
       min-height: 300px;
     }
 
-    .hero-art img {
-      max-width: 280px;
-      width: 100%;
-      height: auto;
-      object-fit: contain;
+    /* NEW: text-based logo inside hero (replaces image) */
+    .hero-logo {
+      position: relative;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 12px;
+      z-index: 1;
     }
 
-    .hero-strip {
-      margin-top: 60px;
-      display: flex;
-      gap: 0;
-      border-top: 1px solid rgba(244, 243, 241, 0.12);
-      padding-top: 26px;
+    .hero-logo::before {
+      /* curved detail behind the logo text */
+      content: '';
+      position: absolute;
+      width: 260px;
+      height: 90px;
+      bottom: -18px;
+      left: 50%;
+      transform: translateX(-50%) rotate(-6deg);
+      border-bottom: 10px solid var(--super-green);
+      border-radius: 60%/100%;
+      z-index: 0;
+      opacity: 0.95;
+      filter: blur(0.2px);
     }
 
-    .hstat {
-      flex: 1;
-    }
-
-    .hstat-num {
+    .logo-line1 {
       font-family: 'Anton', sans-serif;
-      font-size: 34px;
-      color: var(--amber);
-      font-weight: 700;
+      font-size: clamp(16px, 2.6vw, 22px);
+      color: var(--white);
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      z-index: 1;
     }
 
-    .hstat-label {
-      font-size: 11px;
-      color: var(--gray);
+    .logo-line2 {
+      font-family: 'Anton', sans-serif;
+      font-size: clamp(24px, 4.6vw, 40px);
+      color: var(--super-green);
+      font-weight: 800;
+      font-style: italic;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-top: 4px;
-      font-weight: 600;
+      z-index: 1;
+    }
+
+    /* Make the curve smaller on small screens */
+    @media (max-width: 460px) {
+      .hero-logo::before {
+        width: 160px;
+        height: 56px;
+        bottom: -12px;
+        border-bottom-width: 7px;
+        transform: translateX(-50%) rotate(-4deg);
+      }
+      .logo-line1 { font-size: clamp(14px, 3.2vw, 18px); }
+      .logo-line2 { font-size: clamp(18px, 6.4vw, 28px); }
     }
 
     @media (max-width: 860px) {
@@ -649,9 +676,12 @@
       </div>
     </div>
 
-    <!-- ILUSTRAÇÃO DO LOGO PRINCIPAL -->
-    <div class="hero-art">
-      <img src="https://raw.githubusercontent.com/ozzyop/Academia-supera-o-fitness/main/IMG_20260909_003600.jpg" alt="Academia Superação Fitness" class="hero-logo-img">
+    <!-- ILUSTRAÇÃO DO LOGO PRINCIPAL (REPLACE IMAGE WITH CSS LOGO) -->
+    <div class="hero-art" aria-hidden="false">
+      <div class="hero-logo" role="img" aria-label="Academia Superação Fitness logo">
+        <div class="logo-line1">ACADEMIA SUPERAÇÃO</div>
+        <div class="logo-line2">FITNESS</div>
+      </div>
     </div>
   </div>
 
@@ -743,7 +773,7 @@
           <li><svg viewBox="0 0 20 20" fill="currentColor"><path d="M8 13l-3-3 1-1 2 2 5-5 1 1z"/></svg>Sem contrato de fidelidade ou taxa de cancelamento</li>
           <li><svg viewBox="0 0 20 20" fill="currentColor"><path d="M8 13l-3-3 1-1 2 2 5-5 1 1z"/></svg>Horário livre de treino</li>
         </ul>
-        <a href="https://wa.me/5569992449335?text=Olá! Gostaria de me matricular no Plano Mensal da Academia Superação Fitness." target="_blank" rel="noopener noreferrer" class="plan-btn">Matricular-se</a>
+        <a href="https://wa.me/5569992449335?text=Olá! Gostaria de me matricular no Plano Mensal da Academia Superação Fitness." target="_blank" rel="noopener noreferrer" class="plan-btn">Matricule-se</a>
       </div>
     </div>
   </div>
