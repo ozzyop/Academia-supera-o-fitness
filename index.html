@@ -517,64 +517,6 @@
       }
     }
 
-    /* ===== GALERIA ===== */
-    .gallery {
-      background: var(--black-soft);
-    }
-
-    .g-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr 1fr;
-      grid-template-rows: 200px 200px;
-      gap: 12px;
-    }
-
-    .g-grid > div:first-child {
-      grid-row: span 2;
-    }
-
-    .g-tile {
-      position: relative;
-      display: flex;
-      align-items: flex-end;
-      padding: 20px;
-      overflow: hidden;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-
-    .g-tile:hover {
-      transform: scale(1.02);
-    }
-
-    .g-tile span {
-      position: relative;
-      z-index: 2;
-      font-family: 'Anton', sans-serif;
-      font-size: 14px;
-      text-transform: uppercase;
-      font-weight: 700;
-    }
-
-    .g-tile::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.7));
-    }
-
-    @media (max-width: 860px) {
-      .g-grid {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 150px 150px;
-      }
-      .g-grid > div:first-child {
-        grid-row: span 1;
-        grid-column: span 2;
-      }
-    }
-
     /* ===== CTA ===== */
     .cta {
       text-align: center;
@@ -726,7 +668,6 @@
     <div class="nav-links">
       <a href="#modalidades">Modalidades</a>
       <a href="#planos">Planos</a>
-      <a href="#estrutura">Estrutura</a>
     </div>
 
     <!-- CTA BOTÃO -->
@@ -837,28 +778,13 @@
         <div class="plan-desc">Acesso total sem taxa de fidelidade.</div>
         <div class="plan-price"><span class="val">R$110</span><span class="period">/mês</span></div>
         <ul class="plan-list">
-          <li><svg viewBox="0 0 20 20" fill="currentColor"><path d="M8 13l-3-3 1-1 2 2 5-5 1 1z"/></svg>Acesso a todas as modalidades (Musculação, Cross Training, Funcional, Ginástica e Pós-Fisioterapia)</li>
+          <li><svg viewBox="0 0 20 20" fill="currentColor"><path d="M8 13l-3-3 1-1 2 2 5-5 1 1z"/></svg>Acesso a todas as modalidades (Musculação, Cross Training, Funcional, Ginástica e Pós-Fisiot[...]
           <li><svg viewBox="0 0 20 20" fill="currentColor"><path d="M8 13l-3-3 1-1 2 2 5-5 1 1z"/></svg>Avaliação física e acompanhamento técnico</li>
           <li><svg viewBox="0 0 20 20" fill="currentColor"><path d="M8 13l-3-3 1-1 2 2 5-5 1 1z"/></svg>Sem contrato de fidelidade ou taxa de cancelamento</li>
           <li><svg viewBox="0 0 20 20" fill="currentColor"><path d="M8 13l-3-3 1-1 2 2 5-5 1 1z"/></svg>Horário livre de treino</li>
         </ul>
-        <a href="https://wa.me/5569992449335?text=Olá! Gostaria de me matricular no Plano Mensal da Academia Superação Fitness." target="_blank" rel="noopener noreferrer" class="plan-btn">Matricular</a>
+        <a href="https://wa.me/5569992449335?text=Olá! Gostaria de me matricular no Plano Mensal da Academia Superação Fitness." target="_blank" rel="noopener noreferrer" class="plan-btn">Matricula[...]
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== GALERIA/ESTRUTURA ===== -->
-<section class="gallery" id="estrutura">
-  <div class="container">
-    <div class="sec-head">
-      <div class="sec-tag">Conheça o espaço</div>
-      <h2>Nossa Estrutura</h2>
-    </div>
-    <div class="g-grid">
-      <div class="g-tile" style="background: linear-gradient(135deg, #4F8C1B, #0A0A0B);"><span>Área de Musculação</span></div>
-      <div class="g-tile" style="background: linear-gradient(135deg, #A8E063, #4F8C1B);"><span>Espaço Cross Training</span></div>
-      <div class="g-tile" style="background: linear-gradient(135deg, #0A0A0B, #1c1c1f);"><span>Sala de Aeróbica</span></div>
     </div>
   </div>
 </section>
@@ -868,7 +794,7 @@
   <div class="container">
     <h2>Chega de adiar.<br>Comece hoje.</h2>
     <p>Sua primeira aula experimental é por nossa conta. Venha conhecer a estrutura e sentir a energia do treino.</p>
-    <a href="https://wa.me/5569992449335?text=Olá! Gostaria de agendar minha primeira aula experimental na Academia Superação Fitness." target="_blank" rel="noopener noreferrer" class="btn btn-primary">Quero minha aula grátis</a>
+    <a href="https://wa.me/5569992449335?text=Olá! Gostaria de agendar minha primeira aula experimental na Academia Superação Fitness." target="_blank" rel="noopener noreferrer" class="btn btn-prim[...]
   </div>
 </section>
 
